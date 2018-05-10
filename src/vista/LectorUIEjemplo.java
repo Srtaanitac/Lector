@@ -56,28 +56,32 @@ public class LectorUIEjemplo extends JFrame {
 		setResizable(false);
 
 		contentPane = new JPanel();
-		contentPane.setBackground(SystemColor.inactiveCaption);
+		contentPane.setBackground(new Color(46, 139, 87));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 
 		// para que no parta las palabras
 		textArea = new JTextArea();
-		textArea.setBackground(SystemColor.controlHighlight);
+		textArea.setBackground(new Color(240, 248, 255));
 		textArea.setLineWrap(true);
 		textArea.setWrapStyleWord(true);
 		contentPane.add(textArea, BorderLayout.CENTER);
 
 		// Panel de botones
 		JPanel panel = new JPanel();
-		panel.setBackground(SystemColor.activeCaption);
+		panel.setBackground(new Color(102, 205, 170));
 		contentPane.add(panel, BorderLayout.SOUTH);
 
 		lblNumeroPagina = new JLabel("0");
 		btnAtras = new JButton("<<");
+		btnAtras.setBackground(new Color(95, 158, 160));
 		btnAlante = new JButton(">>");
+		btnAlante.setBackground(new Color(95, 158, 160));
 		btnMarcar = new JButton("Marcar");
+		btnMarcar.setBackground(new Color(95, 158, 160));
 		btnIrAMarca = new JButton("Ir a Marca");
+		btnIrAMarca.setBackground(new Color(95, 158, 160));
 		btnIrAMarca.setForeground(SystemColor.desktop);
 
 		panel.add(btnAtras);
