@@ -66,12 +66,12 @@ public class LectorUI extends JFrame {
 		panel.add(btnAlante);
 		panel.add(lblNumeroPagina);
 		StringBuilder cadena = new StringBuilder();
-		cadena.append("a");
+		//cadena.append("a");
 		textArea.setText(cadena.toString());
 		// al textArea se le puede preguntar por su tamaño preferido
 		System.out.println(textArea.getPreferredSize().getHeight());
 		System.out.println(textArea.getHeight());
-		cadena.append("m\n ttttt");
+		//cadena.append("m\n ttttt");
 		textArea.setText(cadena.toString());
 		System.out.println(textArea.getPreferredSize().getHeight());
 		System.out.println(textArea.getHeight());
