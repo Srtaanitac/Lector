@@ -1,6 +1,9 @@
 package modelo;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import control.ParaUI;
 
 public class Libro implements Legible {
 
@@ -8,10 +11,12 @@ public class Libro implements Legible {
 	private int actual = 0;
 	private int marca = 0;
 	private ArrayList<Pagina> paginas;
+	private ParaUI ParaUI;
+	private byte[] longuitud;
 
 	public Libro() {
 		super();
-		lectura = "ruta al archivo";
+		lectura = "JuegoTronos.txt";
 		paginas = new ArrayList<>();
 	}
 
@@ -47,8 +52,19 @@ public class Libro implements Legible {
 		return true;
 	}
 
-	// le pasamos la maquina que será una lista..
-	private boolean cargarPagina(int pagina) {
+	// le pasamos una lista..
+	public boolean cargarPagina(int pagina) {
+		try {
+			longuitud = new byte[700];
+			FileInputStream Pagina = new FileInputStream(lectura);
+			for (int i = 0; i < pagina; i++) {
+				Pagina.read(this.longuitud);
+			}
+			Pagina.close();
+
+		} catch (Exception e) {
+			System.out.println("No se puede cargar la pagina");
+		}
 		return true;
 	}
 
