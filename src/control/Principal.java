@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.UIManager;
 
-import vista.LectorUIEjemplo;
+import vista.LectorUI;
 
 //ESTO NO SE TOCA, ES PARA DARLE AL PLAY
 

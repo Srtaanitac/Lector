@@ -5,17 +5,17 @@ import java.awt.event.ActionListener;
 
 import control.ParaUI;
 
-public class AccionRetrocederPagina implements ActionListener{
+public class Marcar implements ActionListener{
 	
 	private ParaUI ParaUI;
 
-	public AccionRetrocederPagina(ParaUI ParaUI) {
+	public Marcar(ParaUI ParaUI) {
 		this.ParaUI = ParaUI;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		ParaUI.getLibro().retrocederPagina();
+		ParaUI.getLibro().marcarPagina();
 	
 	}
 

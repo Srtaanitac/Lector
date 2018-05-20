@@ -7,7 +7,7 @@ import control.ParaUI;
 
 public class Libro implements Legible {
 
-	private String lectura;
+	private String texto;
 	private int actual = 0;
 	private int marca = 0;
 	private ArrayList<Pagina> paginas;
@@ -16,7 +16,7 @@ public class Libro implements Legible {
 
 	public Libro() {
 		super();
-		lectura = "JuegoTronos.txt";
+		texto = "JuegoTronos.txt";
 		paginas = new ArrayList<>();
 	}
 
@@ -54,27 +54,16 @@ public class Libro implements Legible {
 
 	// le pasamos una lista..
 	public boolean cargarPagina(int pagina) {
-		try {
-			longuitud = new byte[700];
-			FileInputStream Pagina = new FileInputStream(lectura);
-			for (int i = 0; i < pagina; i++) {
-				Pagina.read(this.longuitud);
-			}
-			Pagina.close();
-
-		} catch (Exception e) {
-			System.out.println("No se puede cargar la pagina");
-		}
+		
 		return true;
 	}
 
 	private boolean comprobarUltimaPagina() {
-		// TODO Auto-generated method stub
-		return false;
+		return actual==paginas.size()-1;
 	}
 
 	private boolean comprobarPrimeraPagina() {
-		return false;
+		return actual==0;
 	}
 
 	@Override
@@ -91,7 +80,7 @@ public class Libro implements Legible {
 	}
 
 	public String getLectura() {
-		return lectura;
+		return texto;
 	}
 
 	public int getActual() {

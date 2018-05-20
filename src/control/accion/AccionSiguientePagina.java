@@ -5,18 +5,18 @@ import java.awt.event.ActionListener;
 
 import control.ParaUI;
 
-public class AccionRetrocederPagina implements ActionListener{
-	
+public class AccionSiguientePagina implements ActionListener {
+
 	private ParaUI ParaUI;
 
-	public AccionRetrocederPagina(ParaUI ParaUI) {
+	public AccionSiguientePagina(ParaUI ParaUI) {
 		this.ParaUI = ParaUI;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		ParaUI.getLibro().retrocederPagina();
-	
+		ParaUI.getLibro().avanzarPagina();
+
 	}
 
 }
