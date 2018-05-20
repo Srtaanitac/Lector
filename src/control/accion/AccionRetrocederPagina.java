@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 
 import control.ParaUI;
 
-public class AccionRetrocederPagina implements ActionListener{
-	
+public class AccionRetrocederPagina implements ActionListener {
+
 	private ParaUI ParaUI;
 
 	public AccionRetrocederPagina(ParaUI ParaUI) {
@@ -16,7 +16,8 @@ public class AccionRetrocederPagina implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		ParaUI.getLibro().retrocederPagina();
-	
+		ParaUI.actualizarNumeroPagina();
+
 	}
 
 }

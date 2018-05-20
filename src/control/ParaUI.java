@@ -13,7 +13,7 @@ public class ParaUI extends LectorUI {
 
 	}
 
-	private void acciones() {
+	public void acciones() {
 		btnAtras.addActionListener(new AccionRetrocederPagina(this));
 		btnIrAMarca.addActionListener(new IrAMarca(this));
 		btnMarcar.addActionListener(new Marcar(this));

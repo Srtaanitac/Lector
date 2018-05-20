@@ -5,8 +5,8 @@ import java.awt.event.ActionListener;
 
 import control.ParaUI;
 
-public class Marcar implements ActionListener{
-	
+public class Marcar implements ActionListener {
+
 	private ParaUI ParaUI;
 
 	public Marcar(ParaUI ParaUI) {
@@ -16,7 +16,8 @@ public class Marcar implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		ParaUI.getLibro().marcarPagina();
-	
+		ParaUI.actualizarNumeroPagina();
+
 	}
 
 }

@@ -16,6 +16,7 @@ public class IrAMarca implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		ParaUI.getLibro().irAMarca();
-	
+		ParaUI.actualizarNumeroPagina();
+
 	}
 }

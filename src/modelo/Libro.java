@@ -11,8 +11,6 @@ public class Libro implements Legible {
 	private int actual = 0;
 	private int marca = 0;
 	private ArrayList<Pagina> paginas;
-	private ParaUI ParaUI;
-	private byte[] longuitud;
 
 	public Libro() {
 		super();
@@ -76,7 +74,9 @@ public class Libro implements Legible {
 	@Override
 	public void irAMarca() {
 		// Y para ir a la marca tenemos que volver a la que era la actual
-
+		if(marca != 0) {
+			actual = marca;
+		}
 	}
 
 	public String getLectura() {

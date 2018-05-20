@@ -16,6 +16,7 @@ public class AccionSiguientePagina implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		ParaUI.getLibro().avanzarPagina();
+		ParaUI.actualizarNumeroPagina();
 
 	}
 
